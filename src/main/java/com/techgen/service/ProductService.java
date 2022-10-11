@@ -1,12 +1,12 @@
 package com.techgen.service;
 
-import com.techgen.entity.Product;
+import com.techgen.model.ProductDTO;
 
 import java.util.List;
 
 public interface ProductService {
 
-    List<Product> searchProducts(String query);
+    ProductDTO searchProductsByNameOrDescription(String searchStr, int pageNo, int pageSize, String sortBy, String sortDir);
 
-    Product createProduct(Product product);
+    ProductDTO createProduct(ProductDTO productDTO);
 }
