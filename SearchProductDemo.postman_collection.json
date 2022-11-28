@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "fc4a330f-ee8d-456c-814e-e37fb0389707",
+		"name": "SearchProductDemo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5863778"
+	},
+	"item": [
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sku\": \"ABC\",\r\n    \"name\": \"laptop tablet\",\r\n    \"description\": \"laptop tablet description\",\r\n    \"active\": true,\r\n    \"imageUrl\": \"tablet.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/api/products/search?searchStr=description&page-no=1&page-size=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "searchStr",
+							"value": "description"
+						},
+						{
+							"key": "page-no",
+							"value": "1"
+						},
+						{
+							"key": "page-size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
